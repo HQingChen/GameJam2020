@@ -1,7 +1,7 @@
 ﻿<Properties StartupConfiguration="{356532A8-7E98-0463-9FBE-3294D61ABB42}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/GameManager.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/PlayerController.cs">
     <Files>
-      <File FileName="Assets/Scripts/PlayerController.cs" Line="69" Column="20" />
+      <File FileName="Assets/Scripts/PlayerController.cs" Line="174" Column="12" />
       <File FileName="Assets/Scripts/GameManager.cs" Line="1" Column="1" />
     </Files>
     <Pads>
@@ -10,7 +10,7 @@
           <Node name="RepairDiablo" expanded="True">
             <Node name="Assets" expanded="True">
               <Node name="Scripts" expanded="True">
-                <Node name="GameManager.cs" selected="True" />
+                <Node name="PlayerController.cs" selected="True" />
               </Node>
             </Node>
           </Node>

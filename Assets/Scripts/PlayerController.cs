@@ -58,7 +58,7 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
-        State state_ = State.STATE_IDLE;
+        State state = State.STATE_IDLE;
         rb = GetComponent<Rigidbody2D>();
         bc = GetComponent<BoxCollider2D>();
         ground = false;
@@ -67,6 +67,7 @@ public class PlayerController : MonoBehaviour
     {
         Debug.Log(state_);
         IsGround();
+        //gethit
         switch (state_)
         {
             //发呆，一定在地板上，身体部位不确定
@@ -165,12 +166,12 @@ public class PlayerController : MonoBehaviour
             }
             spriteRenderer.flipX = false;
         }
-        else if (Input.GetKeyUp(KeyCode.A)|| Input.GetKeyUp(KeyCode.D))
-        {
-            rb.velocity = new Vector2(0.0f, VerticalSpeed);
-            state_ = State.STATE_IDLE;
-            //animator.SetInteger("State", 0);
-        }
+        //else if (Input.GetKeyUp(KeyCode.A)|| Input.GetKeyUp(KeyCode.D))
+        //{
+        //    rb.velocity = new Vector2(0.0f, VerticalSpeed);
+        //    state_ = State.STATE_IDLE;
+        //    //animator.SetInteger("State", 0);
+        //}
     }
 
     public void Attack()
