@@ -65,7 +65,7 @@ public class PlayerController : MonoBehaviour
     }
     void Update()
     {
-        Debug.Log(state_);
+        //Debug.Log(state_);
         IsGround();
         //gethit
         switch (state_)
@@ -149,7 +149,7 @@ public class PlayerController : MonoBehaviour
     {
         HorizontalSpeed = rb.velocity.x;
         VerticalSpeed = rb.velocity.y;
-        Debug.Log(HorizontalSpeed);
+        //Debug.Log(HorizontalSpeed);
         if (Input.GetKey(KeyCode.A))
         {
             if (HorizontalSpeed > -maxSpeed && HorizontalSpeed < maxSpeed)
@@ -197,9 +197,32 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag(""))
+        //if (this.name == "Player1" && other.gameObject.CompareTag("Item1"))
+        //{
+        //    if (other.gameObject.name == "foot1")
+        //    {
+        //        GameObject.Find("foot_p1").SetActive(true);
+        //    }
+        //    if (other.gameObject.name == "arm1")
+        //    {
+        //        GameObject.Find("arm_p1").SetActive(true);
+        //    }
+        //    Destroy(other.gameObject);
+        //}
+        if (this.name == "Player2" && other.gameObject.CompareTag("Item2"))
         {
-            other.gameObject.SetActive(false);
+            //Debug.Log(this.gameObject.activeSelf);
+            if (other.gameObject.name == "foot2")
+            {
+                //Debug.Log(this.gameObject.activeSelf);
+                this.transform.Find("foot_p2").gameObject.SetActive(true);
+            }
+            if (other.gameObject.name == "arm2")
+            {
+                this.transform.Find("arm_p2").gameObject.SetActive(true);
+            }
+            Destroy(other.gameObject);
         }
+
     }
 }
